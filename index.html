@@ -3,147 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة الأحياء الذكية | السادس العلمي</title>
-    <script src="https://jsdelivr.net"></script>
+    <title>منصة الأحياء الذكية المتقدمة | السادس العلمي</title>
+    <!-- استدعاء مكتبات تشغيل التطبيقات السريعة (React) مباشرة للتحميل الفوري -->
+    <script src="https://unpkg.com"></script>
+    <script src="https://unpkg.com"></script>
+    <script src="https://unpkg.com"></script>
+    <script src="https://tailwindcss.com"></script>
     <style>
         body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
 
-    <!-- شريط التنقل العلوي -->
-    <header class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white shadow-lg p-4 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <!-- زر فتح القائمة الجانبية للهاتف -->
-                <button onclick="toggleSidebar()" class="lg:hidden p-1.5 hover:bg-emerald-700 rounded-lg cursor-pointer">
-                    📊 القائمة
-                </button>
-                <div>
-                    <h1 class="text-base md:text-xl font-bold tracking-wide">🧬 مُعلّم الأحياء الذكي</h1>
-                    <p class="text-[9px] text-emerald-100">منهج جمهورية العراق - السادس العلمي</p>
-                </div>
-            </div>
-            <span class="bg-emerald-800/50 px-2.5 py-1 rounded-lg text-xs font-medium border border-emerald-500/30">الفصل الأول: الخلية</span>
-        </div>
-    </header>
+    <div id="root"></div>
 
-    <div class="flex flex-col lg:flex-row flex-grow max-w-7xl w-full mx-auto relative">
-        
-        <!-- القائمة الجانبية للتنقل بين الدروس -->
-        <aside id="sidebar" class="hidden lg:block w-full lg:w-64 bg-white border-l border-slate-100 p-4 shrink-0 lg:sticky lg:top-20 h-fit space-y-2 z-40">
-            <h3 class="font-bold text-slate-400 text-xs uppercase tracking-wider mb-3 px-2">فهرس دروس الخلية</h3>
-            <button onclick="loadLesson('intro')" class="lesson-btn w-full text-right p-2.5 rounded-xl text-xs font-medium bg-emerald-50 text-emerald-900 border-r-4 border-emerald-500 cursor-pointer">✨ مقدمة عن الخلية والتركيب</button>
-            <button onclick="loadLesson('membrane')" class="lesson-btn w-full text-right p-2.5 rounded-xl text-xs font-medium text-slate-600 hover:bg-slate-50 cursor-pointer">🧫 الغشاء البلازمي وجدار الخلية</button>
-            <button onclick="loadLesson('golgi')" class="lesson-btn w-full text-right p-2.5 rounded-xl text-xs font-medium text-slate-600 hover:bg-slate-50 cursor-pointer">📦 جهاز كولجي (الافراز الخلوي)</button>
-            <button onclick="loadLesson('mitochondria')" class="lesson-btn w-full text-right p-2.5 rounded-xl text-xs font-medium text-slate-600 hover:bg-slate-50 cursor-pointer">🔋 المايتوكوندريا (بيوت الطاقة)</button>
-            <button onclick="loadLesson('division')" class="lesson-btn w-full text-right p-2.5 rounded-xl text-xs font-medium text-slate-600 hover:bg-slate-50 cursor-pointer">🔄 انقسام الخلية (الميتوزي)</button>
-        </aside>
-
-        <!-- المحتوى الرئيسي للمنصة -->
-        <main class="grid grid-cols-1 lg:grid-cols-12 gap-6 p-4 md:p-6 flex-grow w-full">
-            
-            <!-- قسم الفيديو والاختبار التفاعلي -->
-            <section class="lg:col-span-7 space-y-4 lg:sticky lg:top-24 h-fit">
-                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
-                    <h3 id="video-title" class="font-bold text-slate-800 mb-3 flex items-center gap-2 text-xs md:text-sm">
-                        🎬 محاكاة بلندر: تركيب الخلية الحية
-                    </h3>
-                    
-                    <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-black shadow-md">
-                        <iframe 
-                            id="video-player"
-                            class="absolute top-0 left-0 w-full h-full"
-                            src="https://youtube-nocookie.com" 
-                            title="Biology Animation"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <p class="text-[11px] text-slate-500 mt-2 text-center bg-slate-50 py-1.5 rounded-lg">
-                        💡 <strong>توجيه:</strong> شاهد الوسيلة التعليمية المرئية بالتزامن مع قراءة الشرح المنهجي.
-                    </p>
-                </div>
-
-                <!-- مكون الاختبار التفاعلي الذكي -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
-                    <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2 text-xs">
-                        ✏️ اختبار عقل المعلم السريع (تفاعلي)
-                    </h3>
-                    <div id="quiz-box" class="space-y-3">
-                        <p id="quiz-question" class="font-medium text-slate-700 text-xs md:text-sm">س: من هو العالم الذي رأى الخلية لأول مرة وأطلق عليها هذا الاسم؟</p>
-                        <div id="quiz-options" class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            <!-- الخيارات تتغير برمجياً -->
-                        </div>
-                        <div id="quiz-result" class="hidden p-2.5 rounded-xl text-center font-bold text-xs mt-2"></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- قسم الشرح المنهجي والوزاريات -->
-            <section class="lg:col-span-5 space-y-4 overflow-y-auto pr-1">
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
-                    <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-md inline-block mb-2">الشرح المنهجي كتاب السادس العلمي</span>
-                    <h2 id="lesson-title" class="text-lg font-bold text-slate-900 mb-2">مقدمة عن الخلية والتركيب</h2>
-                    <p id="lesson-text" class="text-slate-600 leading-relaxed text-xs md:text-sm">
-                        تعد الخلية هي الوحدة التركيبية والوظيفية لجميع الكائنات الحية. وتقسم الخلايا من حيث التركيب إلى نوعين: خلايا بدائية النواة (مثل البكتيريا) وخلايا حقيقية النواة التي تمتلك نواة واضحة محاطة بغشاء نووي.
-                    </p>
-                </div>
-
-                <div id="lesson-details" class="space-y-3">
-                    <!-- تفاصيل الأطوار أو العضيات تتغير هنا -->
-                </div>
-
-                <!-- بنك الأسئلة الوزارية لعقل المعلم -->
-                <div class="bg-amber-50/70 border border-amber-200/60 p-4 rounded-2xl shadow-sm">
-                    <h3 class="font-bold text-amber-900 flex items-center gap-2 mb-2 text-xs md:text-sm">
-                        💡 بنك الأسئلة الوزارية لعقل المعلم
-                    </h3>
-                    <div id="lesson-وزاريات" class="space-y-2 text-xs text-amber-900">
-                        <!-- الوزاريات تتغير هنا -->
-                    </div>
-                </div>
-            </section>
-
-        </main>
-    </div>
-
-    <footer class="bg-slate-900 text-slate-400 text-center py-3 text-[10px] mt-auto border-t border-slate-800">
-        منصة معلم الأحياء الذكي المستقلة © 2026
-    </footer>
-
-    <!-- محرك التطبيق الذكي لإدارة البيانات والدروس برمجياً -->
-    <script>
+    <!-- كود تشغيل التطبيق السريع الذكي -->
+    <script type="text/babel">
         const lessonsData = {
             intro: {
                 title: "مقدمة عن الخلية والتركيب",
                 text: "تعد الخلية هي الوحدة التركيبية والوظيفية لجميع الكائنات الحية. وتقسم الخلايا من حيث التركيب إلى نوعين: خلايا بدائية النواة (مثل البكتيريا) وخلايا حقيقية النواة التي تمتلك نواة واضحة محاطة بغشاء نووي.",
                 videoUrl: "https://youtube-nocookie.com",
                 videoTitle: "🎬 محاكاة بلندر: تركيب الخلية الحية",
-                details: `<div class="bg-white p-4 rounded-2xl shadow-sm border-r-4 border-emerald-500 border border-slate-100">
-                            <h3 class="font-bold text-sm text-slate-900 mb-1">الخلية بدائية النواة</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed">تفتقد للغشاء النووي والعضيات الغشائية كالميتوكوندريا، وتتمثل في البكتيريا والطحالب خضر المزرقة.</p>
-                          </div>`,
-                وزاريات: `<div class="bg-white/80 p-3 rounded-xl border border-amber-100">
-                            <span class="bg-amber-200 text-amber-900 text-[9px] font-bold px-1.5 py-0.5 rounded inline-block mb-1">وزاري</span>
-                            <p class="font-semibold">س: ما هي أسس النظرية الخلوية؟</p>
-                            <p class="text-slate-600 mt-0.5">ج: 1. جميع الكائنات تتكون من خلايا. 2. الخلايا هي الوحدات الأساسية. 3. تنتج الخلايا من خلايا أخرى من خلال انقسامها.</p>
-                          </div>`,
-                quiz: {
-                    q: "س: من هو العالم الذي رأى الخلية لأول مرة وأطلق عليها هذا الاسم؟",
-                    options: [
-                        { text: "أ) روبرت هوك", correct: true },
-                        { text: "ب) انطوني فان ليفنهوك", correct: false },
-                        { text: "ج) روبرت براون", correct: false },
-                        { text: "د) ثيودور شوان", correct: false }
-                    ]
-                }
+                detailTitle: "الخلية بدائية النواة",
+                detailDesc: "تفتقد للغشاء النووي والعضيات الغشائية كالميتوكوندريا، وتتمثل في البكتيريا والطحالب خضر المزرقة.",
+                وزاريQ: "س: ما هي أسس النظرية الخلوية؟",
+                وزاريA: "ج: 1. جميع الكائنات تتكون من خلايا. 2. الخلايا هي الوحدات الأساسية. 3. تنتج الخلايا من خلايا أخرى من خلال انقسامها.",
+                q: "س: من هو العالم الذي رأى الخلية لأول مرة وأطلق عليها هذا الاسم؟",
+                options: ["روبرت هوك", "انطوني فان ليفنهوك", "روبرت براون", "ثيودور شوان"],
+                correctIndex: 0,
+                wrongMessage: "❌ تذكر أن العالم روبرت هوك هو أول من أطلق مصطلح خلية."
             },
             membrane: {
                 title: "الغشاء البلازمي وجدار الخلية",
                 text: "الغشاء البلازمي هو غشاء خلوي حيوي يحيط بالسيتوبلازم في الخلايا بدائية وحقيقية النواة، وهو غشاء نصف ناضح يسمح بمرور بعض الجزيئات دون غيرها. يتألف كيميائياً من طبقتين من جزيئات الدهون المفسفرة تتخللها جزيئات بروتينية.",
                 videoUrl: "https://youtube-nocookie.com",
                 videoTitle: "🎬 أنيميشن ثلاثي الأبعاد: نفاذية الغشاء البلازمي",
-                details: `<div class="bg-white p-4 rounded-2xl shadow-sm border-r-4 border-teal-500 border border-slate-100">
-                            <h3 class="font-bold text-sm text-slate-900 mb-1">تركيب جدار الخلية (الخلايا النباتية فقط)</h3>
+                detailTitle: "تركيب جدار الخلية (الخلايا النباتية فقط)",
+                detailDesc: "جدار سميك يحيط بالغشاء البلازمي ويحمي الخلية، يتركب من السليلوز في الخلايا الفتية ويتثخن بإضافة الخشبين في الخلايا المتقدمة في العمر.",
+                وزاريQ: "س: ما التركيب الكيميائي للغشاء البلازمي؟",
+                وزاريA: "ج: طبقتين من الدهون المفسفرة (طرف أليف للماء وطرف نافر للماء) تتخللها جزيئات بروتينية تسمح وتتحكم بمرور المواد.",
+                q: "س: يقتصر وجود جدار الخلية على الخلايا:",
+                options: ["الحيوانية فقط", "النباتية فقط", "البكتيرية فقط", "جميع ما ذكر"],
+                correctIndex: 1,
+                wrongMessage: "❌ تذكر أن جدار الخلية يقتصر وجوده على الخلايا النباتية لحمايتها."
+            },
+            golgi: {
+                title: "جهاز كولجي (الافراز الخلوي)",
+                text: "جهاز إفرازي خلوي يتخذ موقعاً خاصاً في السيتوبلازم بين النواة والغشاء البلازمي. يتركب من ثلاث ردهات غشائية هي الصهاريج، الحويصلات، والفجوات الكبيرة. يخلو تماماً من الريبوسومات.",
+                videoUrl: "https://youtube-nocookie.com",
+                videoTitle: "🎬 عمل جهاز كولجي داخل السيتوبلازم",
+                detailTitle: "الدكتيوسوم (جهاز كولجي في النبات)",
+                detailDesc: "يطلق على جهاز كولجي في الخلايا النباتية اسم الدكتيوسوم، ووظيفته بناء السليلوز وبناء بعض مكونات الجدار الخلوي.",
+                وزاريQ: "س: ما هي وظيفة جهاز كولجي في الخلايا الحيوانية؟",
+                وزاريA: "ج: 1. إفراز السكريات المعقدة. 2. إفراز البروتين. 3. إفراز الهرمونات والأنزيمات.",
+                q: "س: ماذا يطلق على جهاز كولجي في الخلايا النباتية؟",
+                options: ["الجسيم الحي", "الدكتيوسوم", "الجسيم المركزي", "المايتوكوندريا"],
+                correctIndex: 1,
+                wrongMessage: "❌ تذكر أن الدكتيوسوم هو الاسم المطلق عليه في الخلايا النباتية وظيفتة بناء السليلوز."
+            },
+            mitochondria: {
+                title: "المايتوكوندريا (بيوت الطاقة)",
+                text: "تراكيب كروية أو خيطية محاطة بغشاء مزدوج ثنائي الطبقة، الطبقة الداخلية تظهر انثناءات وتطويات تعرف بالأعراف وظيفتها زيادة المساحة السطحية للطبقة الداخلية. تعرف المايتوكوندريا ببيوت الطاقة في الخلية.",
+                videoUrl: "https://youtube-nocookie.com",
+                videoTitle: "🎬 محاكاة بلندر: تركيب المايتوكوندريا",
+                detailTitle: "الأعراف (Cristae)",
+                detailDesc: "هي انثناءات وتطويات تتخذ أشكالاً مختلفة من الغشاء الداخلي للمايتوكوندريا، تزيد المساحة السطحية وتضم أنزيمات تنفسية.",
+                وزاريQ: "س: علل: تعرف المايتوكوندريا ببيوت الطاقة في الخلية؟",
+                وزاريA: "ج: لما لها من علاقة بإنتاج معظم جزيئات أدينوسين ثلاثي الفوسفات (ATP) ذات الطاقة العالية.",
+                q: "س: الوظيفة الرئيسية للمايتوكوندريا هي:",
+                options: ["التنفس الخلوي لإنتاج ATP", "بناء السليلوز", "البناء الضوئي", "إفراز البروتينات"],
+                correctIndex: 0,
+                wrongMessage: "❌ تذكر أن وظيفتها الرئيسية هي التنفس الخلوي وتحرير الطاقة للخلية."
+            },
+            division: {
+                title: "انقسام النواة (الانقسام الميتوزي)",
+                text: "عملية معقدة تهدف إلى ضمان حصول الخليتين البنويتين الجديدتين على نفس العدد والنوعية من الكروموسومات الموجودة أصلاً في الخلية الأم. يمر هذا الانقسام بأربعة أطوار أساسية تسبقها مرحلة تحضيرية مهمة تسمى الطور البيني.",
+                videoUrl: "https://youtube-nocookie.com",
+                videoTitle: "🎬 محاكاة بلندر: الأطوار الأربعة للانقسام",
+                detailTitle: "الطور الاستوائي (Metaphase)",
+                detailDesc: "تنكمش وتتغلظ الكروموسومات وتأخذ موقعاً عند خط استواء المغزل وتتعلق بخيوطه بواسطة أجزائها المركزية.",
+                وزاريQ: "س: في أي طور أو دور يحدث: تضاعف الجسيم المركزي؟",
+                وزاريA: "ج: في الطور البيني للانقسام الخيطي.",
+                q: "س: تتعلق الكروموسومات بخيوط المغزل بواسطة أجزائها المركزية في الطور:",
+                options: ["الطور التمهيدي", "الطور الاستوائي", "الطور الانفصالي", "الطور النهائي"],
+                correctIndex: 1,
+                wrongMessage: "❌ تذكر أن التعلق يحدث في الطور الاستوائي عند خط استواء المغزل."
+            }
+        };
+
+        function App() {
+            const [currentLesson, setCurrentLesson] = React.useState('intro');
+            const [sidebarOpen, setSidebarOpen] = React.useState(false);
+            const [selectedAnswer, setSelectedAnswer] = React.useState(null);
+            const [quizStatus, setQuizStatus] = React.useState(null); // 'correct' or 'wrong'
+
+            const lesson = lessonsData[currentLesson];
+
+            const handleLessonChange = (key) => {
+                setCurrentLesson(key);
+                setSelectedAnswer(null);
+                setQuizStatus(null);
+                setSidebarOpen(false);
+            };
+
+            const handleAnswerClick = (index) => {
+                setSelectedAnswer(index);
+                if (index === lesson.correctIndex) {
+                    setQuizStatus('correct');
+                } else {
+                    setQuizStatus('wrong');
+                }
+            };
+
+            return (
+                <div className="flex flex-col flex-grow">
+                    <header class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white shadow-lg p-4 sticky top-0 z-50">
+                        <div class="max-w-7xl mx-auto flex justify-between items-center">
+                            <div class="flex items-center gap-3">
+                                <button onClick={() => setSidebarOpen(!sidebarOpen)} class="lg:hidden p-1.5 bg-emerald-700 hover:bg-emerald-800 rounded-lg text-xs font-bold">
+                                    📊 الدروس
+                                </button>
+                                <div>
+                                    <h1 class="text-base md:text-xl font-bold tracking-wide">🧬 مُعلّم الأحياء الذكي</h1>
+                                    <p class="text-[9px] text-emerald-100">منهج جمهورية العراق - السادس العلمي</p>
+                                </div>
+                            </div>
+                            <span class="bg-emerald-800/50 px-2.5 py-1 rounded-lg text-xs font-medium border border-emerald-500/30">الفصل الأول: الخلية</span>
+                        </div>
+                    </header>
+
+                    <div className="flex flex-col lg:flex-row flex-grow max-w-7xl w-full mx-auto relative">
+                        <aside className={`${sidebarOpen ? 'block' : 'hidden'} lg:block w-full lg:w-64 bg-white border-l border-slate-100 p-4 shrink-0 lg:sticky lg:top-20 h-fit space-y-2 z-40`}>
+                            <h3 class="font-bold text-slate-400 text-xs uppercase tracking-wider mb-3 px-2">فهرس دروس الخلية</h3>
+                            {Object.keys(lessonsData).map((key) => (
+                                <button 
+                                    key={key}
+                                    onClick={() => handleLessonChange(key)} 
+                                    className={`w-full text-right p-2.5 rounded-xl text-xs font-medium transition cursor-pointer ${currentLesson === key ? 'bg-emerald-50 text-emerald-900 border-r-4 border-emerald-500' : 'text-slate-600 hover:bg-slate-50'}`}
+                                >
+                                    {lessonsData[key].title}
+                                </button>
+                            ))}
