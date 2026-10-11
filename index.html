@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة الأحياء الذكية | السادس العلمي</title>
-    <!-- استدعاء أحدث أدوات التصميم السريع -->
+    <!-- استدعاء أدوات التصميم المتوافقة مع الهاتف والكمبيوتر -->
     <script src="https://jsdelivr.net"></script>
     <style>
         body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
@@ -13,94 +13,28 @@
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
 
     <!-- شريط التنقل العلوي -->
-    <header class="bg-gradient-to-r align-middle from-emerald-600 to-teal-700 text-white shadow-lg p-4 sticky top-0 z-50">
+    <header class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white shadow-lg p-4 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div>
-                <h1 class="text-xl md:text-2xl font-bold tracking-wide">🧬 مُعلّم الأحياء الذكي</h1>
-                <p class="text-xs text-emerald-100 mt-0.5">منهج جمهورية العراق - السادس العلمي</p>
+                <h1 class="text-lg md:text-2xl font-bold tracking-wide">🧬 مُعلّم الأحياء الذكي</h1>
+                <p class="text-[10px] text-emerald-100 mt-0.5">منهج جمهورية العراق - السادس العلمي</p>
             </div>
-            <div class="flex items-center gap-3">
-                <span class="bg-emerald-800/50 px-3 py-1.5 rounded-lg text-xs md:text-sm font-medium border border-emerald-500/30">الفصل الأول: الخلية</span>
-            </div>
+            <span class="bg-emerald-800/50 px-2.5 py-1 rounded-lg text-xs font-medium border border-emerald-500/30">الفصل الأول: الخلية</span>
         </div>
     </header>
 
-    <!-- المحتوى الرئيسي للمنصة -->
+    <!-- المحتوى الرئيسي للمنصة (مرتب تلقائياً للهاتف والكمبيوتر) -->
     <main class="max-w-7xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 flex-grow w-full">
         
-        <!-- القسم الأيمن (5 أعمدة): المحتوى المنهجي وعقل المعلم -->
-        <section class="lg:col-span-5 space-y-6 overflow-y-auto lg:max-h-[calc(100vh-140px)] pr-1">
-            
-            <!-- تبويب المادة الدراسية -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div class="flex items-center gap-2 mb-3">
-                    <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-md">الشرح المنهجي</span>
-                </div>
-                <h2 class="text-2xl font-bold text-slate-900 mb-3">انقسام النواة (الانقسام الميتوزي)</h2>
-                <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-                    يعد الانقسام الخيطي عملية معقدة تهدف إلى ضمان حصول الخليتين البنويتين الجديدتين على نفس العدد والنوعية من الكروموسومات الموجودة أصلاً في الخلية الأم. يمر هذا الانقسام بأربعة أطوار أساسية تسبقها مرحلة تحضيرية مهمة.
-                </p>
-            </div>
-
-            <!-- أطوار الانقسام المفصلة -->
-            <div class="space-y-4">
-                <!-- الطور البيني -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border-r-4 border-amber-500 border border-slate-100">
-                    <h3 class="font-bold text-base md:text-lg text-slate-900 mb-1.5">الطور البيني (Interphase) - تمهيد وزاري</h3>
-                    <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
-                        تكون فيه النواة كبيرة بالمقارنة مع الأنوية في الخلايا المنقسمة. تقوم الخلية فيه بتخليق الأحماض النووية والبروتينات، ويتضاعف فيه جزيء الدنا (DNA) وتضاعف الجسيم المركزي.
-                    </p>
-                </div>
-
-                <!-- الطور التمهيدي -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border-r-4 border-emerald-500 border border-slate-100">
-                    <h3 class="font-bold text-base md:text-lg text-slate-900 mb-1.5">1. الطور التمهيدي (Prophase)</h3>
-                    <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
-                        تتميز الشبكة الكروماتينية إلى كروموسومات كثيفة تتميز إلى كروماتيدين شقيقين يرتبطان بالجزء المركزي. يتباعد الجسيمان المركزيان نحو القطبين وتختفي النوية والغشاء النووي.
-                    </p>
-                </div>
-
-                <!-- الطور الاستوائي -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border-r-4 border-emerald-500 border border-slate-100">
-                    <h3 class="font-bold text-base md:text-lg text-slate-900 mb-1.5">2. الطور الاستوائي (Metaphase)</h3>
-                    <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
-                        تنكمش وتتغلظ الكروموسومات وتأخذ موقعاً عند خط استواء المغزل، وتتعلق بخيوطه بواسطة أجزائها المركزية.
-                    </p>
-                </div>
-            </div>
-
-            <!-- عقل المعلم والأسئلة الوزارية -->
-            <div class="bg-amber-50/70 border border-amber-200/60 p-5 rounded-2xl shadow-sm">
-                <h3 class="font-bold text-amber-900 flex items-center gap-2 mb-3 text-sm md:text-base">
-                    💡 بنك الأسئلة الوزارية لعقل المعلم
-                </h3>
-                <div class="space-y-3 text-xs md:text-sm text-amber-900">
-                    <div class="bg-white/80 p-3 rounded-xl border border-amber-100">
-                        <span class="bg-amber-200 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded mb-1 inline-block">سؤال وزاري متكرر</span>
-                        <p class="font-semibold">في أي طور أو دور يحدث: تضاعف الجسيم المركزي؟</p>
-                        <p class="text-slate-600 mt-1"><span class="font-bold text-emerald-700">ج:</span> في الطور البيني.</p>
-                    </div>
-                    <div class="bg-white/80 p-3 rounded-xl border border-amber-100">
-                        <span class="bg-amber-200 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded mb-1 inline-block">وزاري</span>
-                        <p class="font-semibold">ما هي أهمية الطور البيني قبل انقسام الخلية؟</p>
-                        <p class="text-slate-600 mt-1"><span class="font-bold text-emerald-700">ج:</span> تضاعف الـ DNA والجسيم المركزي وتخليق البروتينات لتحضير الخلية للانقسام.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- القسم الأيسر (7 أعمدة): وسيلة الإيضاح والفيديو والاختبار الذكي -->
-        <section class="lg:col-span-7 space-y-6">
-            
-            <!-- نافذة الوسيلة التوضيحية -->
+        <!-- القسم الخاص بوسيلة الإيضاح والفيديو (يظهر في الأعلى على الهاتف ليراه الطالب أولاً) -->
+        <section class="lg:col-span-7 space-y-4 lg:sticky lg:top-24 h-fit">
             <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
                 <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2 text-sm md:text-base">
                     🎬 محاكاة بلندر (Blender) ثلاثية الأبعاد لانقسام الخلية
                 </h3>
                 
-                <!-- مشغل الفيديو -->
+                <!-- مشغل فيديو متوافق ويدعم التشغيل على الهواتف بدون حظر -->
                 <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-black shadow-md">
-                    <!-- تم وضع فيديو تعليمي عالي الجودة للانقسام الخيطي كمثال، استبدله برابطك متى شئت -->
                     <iframe 
                         class="absolute top-0 left-0 w-full h-full"
                         src="https://youtube.com" 
@@ -110,37 +44,86 @@
                         allowfullscreen>
                     </iframe>
                 </div>
-                <p class="text-[11px] md:text-xs text-slate-500 mt-2.5 text-center bg-slate-50 py-1.5 rounded-lg">
-                    💡 <strong>توجيه:</strong> لاحظ حركة الكروماتيدات وانفصالها بالتزامن مع قراءة الأطوار المنهجية.
+                <p class="text-[11px] text-slate-500 mt-2 text-center bg-slate-50 py-1.5 rounded-lg">
+                    💡 <strong>توجيه:</strong> شاهد حركة الكروموسومات وانفصالها في الفيديو المتوافق مع منهجك.
                 </p>
             </div>
 
-            <!-- اختبار تفاعلي فوري ذكي (Quiz Component) -->
+            <!-- اختبار تفاعلي فوري ذكي (Quiz Component) مرن ومناسب لشاشة الهاتف -->
             <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
-                <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2 text-sm md:text-base">
+                <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2 text-sm">
                     ✏️ اختبار عقل المعلم السريع (تفاعلي)
                 </h3>
                 
-                <div id="quiz-box" class="space-y-4">
-                    <p class="font-medium text-slate-700 text-sm md:text-base">س: تتعلق الكروموسومات بخيوط المغزل بواسطة أجزائها المركزية في الطور:</p>
+                <div id="quiz-box" class="space-y-3">
+                    <p class="font-medium text-slate-700 text-xs md:text-sm">س: تتعلق الكروموسومات بخيوط المغزل بواسطة أجزائها المركزية في الطور:</p>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <button onclick="checkAnswer(false, this)" class="quiz-option text-right p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition text-sm cursor-pointer">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <button onclick="checkAnswer(false, this)" class="quiz-option text-right p-2.5 rounded-xl border border-slate-200 hover:border-emerald-500 bg-slate-50 text-xs cursor-pointer w-full">
                             أ) الطور التمهيدي
                         </button>
-                        <button onclick="checkAnswer(true, this)" class="quiz-option text-right p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition text-sm cursor-pointer">
+                        <button onclick="checkAnswer(true, this)" class="quiz-option text-right p-2.5 rounded-xl border border-slate-200 hover:border-emerald-500 bg-slate-50 text-xs cursor-pointer w-full">
                             ب) الطور الاستوائي
                         </button>
-                        <button onclick="checkAnswer(false, this)" class="quiz-option text-right p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition text-sm cursor-pointer">
+                        <button onclick="checkAnswer(false, this)" class="quiz-option text-right p-2.5 rounded-xl border border-slate-200 hover:border-emerald-500 bg-slate-50 text-xs cursor-pointer w-full">
                             ج) الطور الانفصالي
                         </button>
-                        <button onclick="checkAnswer(false, this)" class="quiz-option text-right p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition text-sm cursor-pointer">
+                        <button onclick="checkAnswer(false, this)" class="quiz-option text-right p-2.5 rounded-xl border border-slate-200 hover:border-emerald-500 bg-slate-50 text-xs cursor-pointer w-full">
                             د) الطور النهائي
                         </button>
                     </div>
                     
-                    <!-- رسالة النتيجة الافتراضية مخفية -->
-                    <div id="quiz-result" class="hidden p-3 rounded-xl text-center font-bold text-sm"></div>
+                    <div id="quiz-result" class="hidden p-2.5 rounded-xl text-center font-bold text-xs mt-2"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- القسم الخاص بالشرح المنهجي والوزاريات (يأتي بعد الفيديو على الهاتف) -->
+        <section class="lg:col-span-5 space-y-4 overflow-y-auto pr-1">
+            
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+                <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-md inline-block mb-2">الشرح المنهجي كتاب السادس العلمي</span>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">انقسام النواة (الانقسام الميتوزي)</h2>
+                <p class="text-slate-600 leading-relaxed text-xs md:text-sm">
+                    يعد الانقسام الخيطي عملية معقدة تهدف إلى ضمان حصول الخليتين البنويتين الجديدتين على نفس العدد والنوعية من الكروموسومات الموجودة أصلاً في الخلية الأم.
+                </p>
+            </div>
+
+            <!-- أطوار الانقسام المفصلة -->
+            <div class="space-y-3">
+                <div class="bg-white p-4 rounded-2xl shadow-sm border-r-4 border-amber-500 border border-slate-100">
+                    <h3 class="font-bold text-sm text-slate-900 mb-1">الطور البيني (Interphase)</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        تكون فيه النواة كبيرة بالمقارنة مع الخلايا المنقسمة. تقوم الخلية بتخليق الأحماض النووية والبروتينات، ويتضاعف فيه جزيء الدنا (DNA) وتضاعف الجسيم المركزي.
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border-r-4 border-emerald-500 border border-slate-100">
+                    <h3 class="font-bold text-sm text-slate-900 mb-1">1. الطور التمهيدي (Prophase)</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        تتميز الشبكة الكروماتينية إلى كروموسومات كثيفة تتميز إلى كروماتيدين شقيقين يرتبطان بالجزء المركزي. يتباعد الجسيمان المركزيان وتختفي النوية والغشاء النووي.
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border-r-4 border-emerald-500 border border-slate-100">
+                    <h3 class="font-bold text-sm text-slate-900 mb-1">2. الطور الاستوائي (Metaphase)</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        تنكمش وتتغلظ الكروموسومات وتأخذ موقعاً عند خط استواء المغزل، وتتعلق بخيوطه بواسطة أجزائها المركزية.
+                    </p>
+                </div>
+            </div>
+
+            <!-- عقل المعلم والأسئلة الوزارية -->
+            <div class="bg-amber-50/70 border border-amber-200/60 p-4 rounded-2xl shadow-sm">
+                <h3 class="font-bold text-amber-900 flex items-center gap-2 mb-2 text-xs md:text-sm">
+                    💡 بنك الأسئلة الوزارية لعقل المعلم
+                </h3>
+                <div class="space-y-2 text-xs text-amber-900">
+                    <div class="bg-white/80 p-3 rounded-xl border border-amber-100">
+                        <span class="bg-amber-200 text-amber-900 text-[9px] font-bold px-1.5 py-0.5 rounded inline-block mb-1">وزاري متكرر</span>
+                        <p class="font-semibold">في أي طور أو دور يحدث: تضاعف الجسيم المركزي؟</p>
+                        <p class="text-slate-600 mt-0.5"><span class="font-bold text-emerald-700">ج:</span> في الطور البيني.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -148,15 +131,30 @@
     </main>
 
     <!-- تذييل الصفحة -->
-    <footer class="bg-slate-900 text-slate-400 text-center py-4 text-xs mt-auto border-t border-slate-800">
+    <footer class="bg-slate-900 text-slate-400 text-center py-3 text-[10px] mt-auto border-t border-slate-800">
         منصة معلم الأحياء الذكي المستقلة © 2026
     </footer>
 
-    <!-- الأكواد البرمجية التفاعلية للاختبار السريع -->
+    <!-- أكواد جافا سكريبت التفاعلية للاختبار السريع -->
     <script>
         function checkAnswer(isCorrect, element) {
-            // إعادة تعيين الألوان لجميع الخيارات
             document.querySelectorAll('.quiz-option').forEach(opt => {
-                opt.className = "quiz-option text-right p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition text-sm cursor-pointer";
+                opt.className = "quiz-option text-right p-2.5 rounded-xl border border-slate-200 bg-slate-50 text-xs cursor-pointer w-full";
             });
 
+            const resultDiv = document.getElementById('quiz-result');
+            resultDiv.classList.remove('hidden');
+
+            if (isCorrect) {
+                element.className = "quiz-option text-right p-2.5 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-emerald-950 font-bold text-xs cursor-pointer w-full";
+                resultDiv.className = "p-2.5 rounded-xl text-center font-bold text-xs bg-emerald-100 text-emerald-800 mt-2";
+                resultDiv.innerText = "🎉 إجابة صحيحة! متوافق مع الأجوبة النموذجية للجنة الفحص الوزاري.";
+            } else {
+                element.className = "quiz-option text-right p-2.5 rounded-xl border-2 border-rose-500 bg-rose-50 text-rose-950 font-bold text-xs cursor-pointer w-full";
+                resultDiv.className = "p-2.5 rounded-xl text-center font-bold text-xs bg-rose-100 text-rose-800 mt-2";
+                resultDiv.innerText = "❌ إجابة خاطئة. تذكر أن الكروموسومات تتعلق بخيوط المغزل في الطور الاستوائي.";
+            }
+        }
+    </script>
+</body>
+</html>
